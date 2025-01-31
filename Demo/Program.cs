@@ -53,13 +53,13 @@
 
             //StringFuncDelegate X = new StringFuncDelegate(StringFunctions.GetCountOfUpperCaseChars) 
 
-            StringFuncDelegate X = StringFunctions.GetCountOfUpperCaseChars; // Syntax Sugar 
+            //StringFuncDelegate X = StringFunctions.GetCountOfUpperCaseChars; // Syntax Sugar 
 
-            X += StringFunctions.GetCountOfLowerCaseChars;
+            //X += StringFunctions.GetCountOfLowerCaseChars;
 
-            //int Count X. Invoke("Hello World"); 
-            int Count = X(s: "Hello World"); // Syntax Sugar 
-            Console.WriteLine(Count);
+            ////int Count X. Invoke("Hello World"); 
+            //int Count = X(s: "Hello World"); // Syntax Sugar 
+            //Console.WriteLine(Count);
 
             #endregion
 
@@ -82,39 +82,125 @@
 
             #endregion
 
-
             #region Delegate Ex02 With Generic
+            //string[] Names = { "Mohammed", "Narges", "Ali", "Ahmed", "Omer" };
+            //SortingAlgorithms.BubbleSort(Names , SortingFunctions.SortAscending);
+
+            //foreach (string item in Names)
+            //{
+
+            //    Console.Write(item + " ");
+
+            //}
+
+            //int[] Number = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
+
+            //SortingAlgorithms.BubbleSort(Number, SortingFunctions.SortAscending);
+
+            //foreach (int item in Number)
+            //{
+
+            //    Console.Write(item + " ");
+
+            //}
 
             #endregion
 
-
             #region Delegate Ex03
+            //List<int> list = Enumerable.Range(1, 100).ToList();
+
+            //List<int> OddNumber = FindNumbers(list, ConditionsFunctions.CheckOdd);
+            //List<int> EvenNumber = FindNumbers(list, ConditionsFunctions.CheckEven);
+            //List<int> DivisalbeBy4Numbers = FindNumbers(list, ConditionsFunctions.CheckDivisalbeBy4Numbers);
+
+            //List<int> OddNumber = FindOddNumbers(list);
+            //List<int> EvenNumber = FindEvenNumbers(list);
+            //List<int> DivisalbeBy4Numbers = FindDivisalbeBy4Numbers(list);
+
+            //foreach (int item in OddNumber)
+            //{
+
+            //    Console.WriteLine(item + " ");
+
+            //}
 
             #endregion
 
             #region Delegate Ex03 With Generics
+            //List<string> Names = new List<string> { "Mohammed", "Narges", "Ali", "Ahmed", "Omer" };
 
+            //List<string> Result =  FindElements(Names, ConditionsFunctionsV2.CheckLengthGtr3);
+            //List<string> result = FindElements(Names, ConditionsFunctionsV2.CheckLengthLess3);
 
+            //foreach (string item in Result) {
 
+            //    Console.WriteLine(item);
+
+            //}
+
+            // ******************************************************
+
+            //List<int> list = Enumerable.Range(1, 100).ToList();
+
+            //List<int> OddNumber = FindElements(list, ConditionsFunctions.CheckOdd);
+            //List<int> EvenNumber = FindElements(list, ConditionsFunctions.CheckEven);
+            //List<int> DivisalbeBy4Numbers = FindElements(list, ConditionsFunctions.CheckDivisalbeBy4Numbers);
+
+            //foreach (int item in OddNumber)
+            //{
+
+            //    Console.WriteLine(item + " ");
+
+            //}
 
             #endregion
 
             #region Built-in Delegate
+            //Predicate<int> predicate = ConditionsFunctions.CheckEven;
 
+
+            //Func<int , bool> func = ConditionsFunctions.CheckEven;
+
+            ////Action action = ConditionsFunctionsV3.Welcome;
+
+            //Action<string> action = ConditionsFunctionsV3.Print;
+            //action.Invoke("Hello");
+            //action("Hello");
             #endregion
 
             #region  Anonymous Method & Lambda Expression
+            // C# 2.0 2005
 
+            //Predicate<int> predicate = delegate (int X) { return X % 2 != 0; }; // Anonymous Methods
+            //Predicate<int> predicate = delegate (int X) { return X % 2 == 0; }; // Anonymous Methods
+
+            //predicate.Invoke(5);
+            //predicate(2);
+
+            // C# 3.0 2007
+            // Lmbda Expression
+            // FatArrow --> Read as "Goes To"
+
+            //Predicate<int> predicate =  (int X) => { return X % 2 == 0; }; // Lmbda Expression
+            //Predicate<int> predicate = (X) => { return X % 2 == 0; }; // Lmbda Expression
+            //Predicate<int> predicate = X =>   X % 2 == 0; ; // Lmbda Expression
+            //FindElements(, X => X % 2 == 0);
 
             #endregion
 
             #region  C# Keyword - var
-
+            //Predicate<int> predicate = ConditionsFunctionsV4.CheckEven;
+            //var X = 12;
             #endregion
 
             #region Function Returns Function - FP Feature
 
+            //var X = Fun01();
+            //Action X = Fun01();
 
+            //X.Invoke();
+
+            //Fun01()();
 
 
             #endregion
